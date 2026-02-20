@@ -15,8 +15,8 @@ public class SceneManager : MonoBehaviour
     private Vector3 SoldierPrefab3 = new Vector3(3.5f, 0.0f, 0.0f);
     private Vector3 SoldierPrefab4 = new Vector3(8.0f, 4.0f, 0.0f);
     private Vector3 SoldierPrefab5 = new Vector3(7.5f, -1.0f, 0.0f);
-    private Vector3 HospitalSpawn1 = new Vector3(-7.5f, 0.0f, 0.0f);
-    private Vector3 HospitalSpawn2 = new Vector3(-7.5f, 0.0f, 0.0f);
+    private Vector3 HospitalSpawn1 = new Vector3(-5.5f, 2.8f, 0.0f);
+    private Vector3 HospitalSpawn2 = new Vector3(-5.6f, -2.5f, 0.0f);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,6 +29,9 @@ public class SceneManager : MonoBehaviour
         Instantiate(SoldierPrefab, SoldierPrefab3, Quaternion.identity);
         Instantiate(SoldierPrefab, SoldierPrefab4, Quaternion.identity);
         Instantiate(SoldierPrefab, SoldierPrefab5, Quaternion.identity);
+        Instantiate(HospitalPrefab, HospitalSpawn1, Quaternion.identity);
+        Instantiate(HospitalPrefab, HospitalSpawn2, Quaternion.identity);
+
     }
 
     // Update is called once per frame
