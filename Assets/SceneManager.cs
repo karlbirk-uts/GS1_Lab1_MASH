@@ -18,6 +18,8 @@ public class SceneManager : MonoBehaviour
     private Vector3 HospitalSpawn1 = new Vector3(-5.5f, 2.8f, 0.0f);
     private Vector3 HospitalSpawn2 = new Vector3(-5.6f, -2.5f, 0.0f);
 
+    private int SoldiersInField;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +34,8 @@ public class SceneManager : MonoBehaviour
         Instantiate(HospitalPrefab, HospitalSpawn1, Quaternion.identity);
         Instantiate(HospitalPrefab, HospitalSpawn2, Quaternion.identity);
 
+        SoldiersInField = GameObject.FindGameObjectsWithTag("Soldier").Length;
+        // print("SoldiersInField: " + SoldiersInField);
     }
 
     // Update is called once per frame
