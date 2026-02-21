@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class SceneManagerMASH : MonoBehaviour
 {
     public GameObject PlayerPrefab;
     public GameObject TreePrefab;
@@ -18,7 +18,7 @@ public class SceneManager : MonoBehaviour
     private Vector3 HospitalSpawn1 = new Vector3(-5.5f, 2.8f, 0.0f);
     private Vector3 HospitalSpawn2 = new Vector3(-5.6f, -2.5f, 0.0f);
 
-    private int SoldiersInField;
+    public int SoldiersInField;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
