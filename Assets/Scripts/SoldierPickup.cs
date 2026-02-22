@@ -3,10 +3,7 @@ using UnityEngine;
 
 public class SoldierPickup : MonoBehaviour
 {
-    
-    // private SceneManagerMASH sceneManagerMash;
     private SceneManagerMASH sceneManagerMASH;
-    // public GameObject sceneManagerMASHGameObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,7 +14,6 @@ public class SoldierPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collider2DObject)
