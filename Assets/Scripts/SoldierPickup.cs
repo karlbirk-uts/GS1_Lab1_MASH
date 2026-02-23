@@ -20,9 +20,18 @@ public class SoldierPickup : MonoBehaviour
     {
         if (collider2DObject.gameObject.tag == "Soldier")
         {
-            sceneManagerMASH.SoldiersInField--;
-            Destroy(collider2DObject.gameObject);
-            print("Hit Trigger: Soldier");
+            if (sceneManagerMASH.SoldiersInHelicopter < 3)
+            {
+                --sceneManagerMASH.SoldiersInField;
+                Destroy(collider2DObject.gameObject);
+                print("Hit Trigger: Soldier");
+                ++sceneManagerMASH.SoldiersInHelicopter;
+            }
+
+        }
+        else
+        {
+            print("Hit Trigger: Not Soldier");
         }
     }
 }

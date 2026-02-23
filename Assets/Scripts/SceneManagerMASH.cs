@@ -18,7 +18,8 @@ public class SceneManagerMASH : MonoBehaviour
     private Vector3 HospitalSpawn1 = new Vector3(-5.5f, 2.8f, 0.0f);
     private Vector3 HospitalSpawn2 = new Vector3(-5.6f, -2.5f, 0.0f);
 
-    public int SoldiersInField;
+    public int SoldiersInField = 5;
+    public int SoldiersInHelicopter = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,5 +42,11 @@ public class SceneManagerMASH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SoldiersInField <= 0)
+        {
+            print("You Win!");
+        }
     }
+    
+    
 }

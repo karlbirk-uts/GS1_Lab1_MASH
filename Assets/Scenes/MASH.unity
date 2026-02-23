@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 995615260}
   m_Layer: 0
   m_Name: Scene Manager MASH
-  m_TagString: Untagged
+  m_TagString: SceneManagerMASH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,10 +300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc017f3b18f5b49248403856cc2a4fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneManager
-  PlayerPrefab: {fileID: 0}
-  TreePrefab: {fileID: 0}
-  SoldierPrefab: {fileID: 0}
-  HospitalPrefab: {fileID: 0}
+  PlayerPrefab: {fileID: 7828973303042501336, guid: aa4209b64372347e88a67d0b6dc997e8, type: 3}
+  TreePrefab: {fileID: 709075868319475733, guid: 3325262e9ce164160b87beff5fc70915, type: 3}
+  SoldierPrefab: {fileID: 7580387858320590128, guid: 3b1f0ea668e294b2fb7e634807f8d786, type: 3}
+  HospitalPrefab: {fileID: 1463352949379822666, guid: b012c3a64f5194aae8923959e605f6a1, type: 3}
+  SoldiersInField: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

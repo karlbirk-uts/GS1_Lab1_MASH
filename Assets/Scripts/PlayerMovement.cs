@@ -19,12 +19,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movementVector = inputAction.ReadValue<Vector2>();
-
     }
 
     void FixedUpdate()
     {
-        print(movementVector);
+        // print(movementVector);
         rb.linearVelocity = movementVector * speed;
     }
 }
