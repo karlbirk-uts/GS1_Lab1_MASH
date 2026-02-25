@@ -20,6 +20,7 @@ public class SceneManagerMASH : MonoBehaviour
 
     public int SoldiersInField = 5;
     public int SoldiersInHelicopter = 0;
+    public int SoldiersInHospital = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,7 +37,7 @@ public class SceneManagerMASH : MonoBehaviour
         Instantiate(HospitalPrefab, HospitalSpawn2, Quaternion.identity);
 
         SoldiersInField = GameObject.FindGameObjectsWithTag("Soldier").Length;
-        // print("SoldiersInField: " + SoldiersInField);
+        
     }
 
     // Update is called once per frame

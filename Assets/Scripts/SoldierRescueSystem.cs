@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class SoldierPickup : MonoBehaviour
+public class SoldierRescueSystem : MonoBehaviour
 {
     private SceneManagerMASH sceneManagerMASH;
 
@@ -29,9 +29,19 @@ public class SoldierPickup : MonoBehaviour
             }
 
         }
+        else if (collider2DObject.gameObject.tag == "Hospital")
+        {
+            sceneManagerMASH.SoldiersInHospital += sceneManagerMASH.SoldiersInHelicopter;
+            sceneManagerMASH.SoldiersInHelicopter = 0;
+            print("Hit Trigger: Hospital");
+        }
+        else if (collider2DObject.gameObject.tag == "Tree")
+        {
+            print("Hit Trigger: Tree");
+        }
         else
         {
-            print("Hit Trigger: Not Soldier");
+            print("Hit Trigger: UNKNOWN HIT TRIGGER");
         }
     }
 }
