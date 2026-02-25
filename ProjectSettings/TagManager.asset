@@ -10,6 +10,7 @@ TagManager:
   - SceneManagerMASH
   - GameOver
   - YouWin
+  - Score
   layers:
   - Default
   - TransparentFX
