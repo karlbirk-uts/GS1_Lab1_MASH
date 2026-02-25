@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SceneManagerMASH : MonoBehaviour
 {
@@ -9,7 +11,8 @@ public class SceneManagerMASH : MonoBehaviour
 
     public GameObject GameOverPrefab;
     public GameObject YouWinPrefab;
-    // public GameObject ResetButtonPrefab;
+
+    private InputAction inputActionReloadMap;
 
     private Vector3 PlayerSpawn = new Vector3(-7.5f, 0.0f, 0.0f);
     private Vector3 TreeSpawn1 = new Vector3(1.0f, 1.9f, 0.0f);
@@ -51,18 +54,30 @@ public class SceneManagerMASH : MonoBehaviour
 
         Instantiate(GameOverPrefab, GameOverSpawn, Quaternion.identity);
         Instantiate(YouWinPrefab, YouWinSpawn, Quaternion.identity);
+
+        inputActionReloadMap = InputSystem.actions.FindAction("ReloadMap");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (KeyCode.R)
+        if (inputActionReloadMap.IsPressed())
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            isGameRunning = true;
+        }
+
         if (isGameRunning)
         {
             if (SoldiersInField <= 0)
             {
                 print("You Win!");
                 endGameWin();
+            }
+
+            if (Time.timeScale < 1.0f)
+            {
+                Time.timeScale = 1.0f;
             }
         }
         else

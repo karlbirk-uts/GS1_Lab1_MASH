@@ -306,7 +306,6 @@ MonoBehaviour:
   HospitalPrefab: {fileID: 1463352949379822666, guid: b012c3a64f5194aae8923959e605f6a1, type: 3}
   GameOverPrefab: {fileID: 4507764115292539043, guid: 883654839b504437da6877fc4964279b, type: 3}
   YouWinPrefab: {fileID: 8106401924893805431, guid: 43f397933ab534c0f981dfa2e99ff12d, type: 3}
-  ResetButtonPrefab: {fileID: 8106401924893805431, guid: 7b83c9ad6baec4111b2d059c4b1eec29, type: 3}
   SoldiersInField: 5
   SoldiersInHelicopter: 0
   SoldiersInHospital: 0
