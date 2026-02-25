@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movementVector = inputActionMove.ReadValue<Vector2>();
-
     }
 
     void FixedUpdate()

@@ -75,7 +75,7 @@ public class SceneManagerMASH : MonoBehaviour
                 endGameWin();
             }
 
-            if (Time.timeScale < 1.0f)
+            if (Time.timeScale < 0.9f)
             {
                 Time.timeScale = 1.0f;
             }
