@@ -37,6 +37,7 @@ public class SoldierRescueSystem : MonoBehaviour
                 ++sceneManagerMASH.SoldiersInHelicopter;
                 // collectSoldierSFX.PlayOneShot();
                 collectSoldierSFX.Play();
+                sceneManagerMASH.updateScoreText();
             }
         }
         else if (collider2DObject.gameObject.tag == "Hospital")

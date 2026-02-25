@@ -113,4 +113,12 @@ public class SceneManagerMASH : MonoBehaviour
         GameObject.FindGameObjectWithTag("YouWin").GetComponent<SpriteRenderer>().enabled = true;
         isGameRunning = false;
     }
+
+    public void updateScoreText()
+    {
+        scoreKeepingText.text = "Soldiers in Helicopter: "
+                                + SoldiersInHelicopter
+                                + "\nSoldiers Rescued: "
+                                + SoldiersInHospital;
+    }
 }
