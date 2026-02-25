@@ -6,8 +6,9 @@ public class SceneManagerMASH : MonoBehaviour
     public GameObject TreePrefab;
     public GameObject SoldierPrefab;
     public GameObject HospitalPrefab;
-    
+
     public GameObject GameOverPrefab;
+    public GameObject YouWinPrefab;
 
     private Vector3 PlayerSpawn = new Vector3(-7.5f, 0.0f, 0.0f);
     private Vector3 TreeSpawn1 = new Vector3(1.0f, 1.9f, 0.0f);
@@ -21,10 +22,13 @@ public class SceneManagerMASH : MonoBehaviour
     private Vector3 HospitalSpawn2 = new Vector3(-5.6f, -2.5f, 0.0f);
 
     private Vector3 GameOverSpawn = new Vector3(0.0f, 0.0f, -1.0f);
+    private Vector3 YouWinSpawn = new Vector3(0.0f, 0.0f, -1.0f);
 
     public int SoldiersInField = 5;
     public int SoldiersInHelicopter = 0;
     public int SoldiersInHospital = 0;
+
+    public bool isGameRunning = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,15 +47,23 @@ public class SceneManagerMASH : MonoBehaviour
         SoldiersInField = GameObject.FindGameObjectsWithTag("Soldier").Length;
 
         Instantiate(GameOverPrefab, GameOverSpawn, Quaternion.identity);
-        
+        Instantiate(YouWinPrefab, YouWinSpawn, Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (SoldiersInField <= 0)
+        if (isGameRunning)
         {
-            print("You Win!");
+            if (SoldiersInField <= 0)
+            {
+                print("You Win!");
+                endGameWin();
+            }
+        }
+        else
+        {
+            Time.timeScale = 0.0f;
         }
     }
 
@@ -60,5 +72,13 @@ public class SceneManagerMASH : MonoBehaviour
     {
         print("endGameDeath()");
         GameObject.FindGameObjectWithTag("GameOver").GetComponent<SpriteRenderer>().enabled = true;
+        isGameRunning = false;
+    }
+
+    private void endGameWin()
+    {
+        print("endGameWin()");
+        GameObject.FindGameObjectWithTag("YouWin").GetComponent<SpriteRenderer>().enabled = true;
+        isGameRunning = false;
     }
 }
