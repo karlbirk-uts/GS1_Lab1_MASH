@@ -20,7 +20,7 @@ public class SceneManagerMASH : MonoBehaviour
     private Vector3 HospitalSpawn1 = new Vector3(-5.5f, 2.8f, 0.0f);
     private Vector3 HospitalSpawn2 = new Vector3(-5.6f, -2.5f, 0.0f);
 
-    private Vector3 GameOverSpawn = new Vector3(0.0f, 0.0f, 0.0f);
+    private Vector3 GameOverSpawn = new Vector3(0.0f, 0.0f, -1.0f);
 
     public int SoldiersInField = 5;
     public int SoldiersInHelicopter = 0;
@@ -58,7 +58,7 @@ public class SceneManagerMASH : MonoBehaviour
 
     public void endGameDeath()
     {
-        
-        throw new System.NotImplementedException();
+        print("endGameDeath()");
+        GameObject.FindGameObjectWithTag("GameOver").GetComponent<SpriteRenderer>().enabled = true;
     }
 }

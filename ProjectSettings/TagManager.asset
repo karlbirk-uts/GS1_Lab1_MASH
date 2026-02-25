@@ -8,6 +8,7 @@ TagManager:
   - Hospital
   - Soldier
   - SceneManagerMASH
+  - GameOver
   layers:
   - Default
   - TransparentFX

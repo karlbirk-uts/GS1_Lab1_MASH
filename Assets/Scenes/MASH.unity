@@ -304,7 +304,10 @@ MonoBehaviour:
   TreePrefab: {fileID: 709075868319475733, guid: 3325262e9ce164160b87beff5fc70915, type: 3}
   SoldierPrefab: {fileID: 7580387858320590128, guid: 3b1f0ea668e294b2fb7e634807f8d786, type: 3}
   HospitalPrefab: {fileID: 1463352949379822666, guid: b012c3a64f5194aae8923959e605f6a1, type: 3}
+  GameOverPrefab: {fileID: 4507764115292539043, guid: 883654839b504437da6877fc4964279b, type: 3}
   SoldiersInField: 0
+  SoldiersInHelicopter: 0
+  SoldiersInHospital: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
