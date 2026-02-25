@@ -4,6 +4,7 @@ using UnityEngine;
 public class SoldierRescueSystem : MonoBehaviour
 {
     private SceneManagerMASH sceneManagerMASH;
+    public AudioClip collectSoldierSFX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,7 @@ public class SoldierRescueSystem : MonoBehaviour
                 Destroy(collider2DObject.gameObject);
                 print("Hit Trigger: Soldier");
                 ++sceneManagerMASH.SoldiersInHelicopter;
+                
             }
 
         }
