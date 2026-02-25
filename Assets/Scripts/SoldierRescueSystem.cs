@@ -38,6 +38,7 @@ public class SoldierRescueSystem : MonoBehaviour
         else if (collider2DObject.gameObject.tag == "Tree")
         {
             print("Hit Trigger: Tree");
+            sceneManagerMASH.endGameDeath();
         }
         else
         {

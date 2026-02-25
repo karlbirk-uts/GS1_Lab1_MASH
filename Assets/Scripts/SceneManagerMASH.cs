@@ -6,6 +6,8 @@ public class SceneManagerMASH : MonoBehaviour
     public GameObject TreePrefab;
     public GameObject SoldierPrefab;
     public GameObject HospitalPrefab;
+    
+    public GameObject GameOverPrefab;
 
     private Vector3 PlayerSpawn = new Vector3(-7.5f, 0.0f, 0.0f);
     private Vector3 TreeSpawn1 = new Vector3(1.0f, 1.9f, 0.0f);
@@ -37,7 +39,8 @@ public class SceneManagerMASH : MonoBehaviour
         Instantiate(HospitalPrefab, HospitalSpawn2, Quaternion.identity);
 
         SoldiersInField = GameObject.FindGameObjectsWithTag("Soldier").Length;
-        
+
+        Instantiate(Prefab)
     }
 
     // Update is called once per frame
@@ -48,6 +51,11 @@ public class SceneManagerMASH : MonoBehaviour
             print("You Win!");
         }
     }
-    
-    
+
+
+    public void endGameDeath()
+    {
+        
+        throw new System.NotImplementedException();
+    }
 }
