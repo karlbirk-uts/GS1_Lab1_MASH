@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4964039294558239144}
   m_Layer: 0
   m_Name: YouWin
-  m_TagString: Untagged
+  m_TagString: YouWin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
