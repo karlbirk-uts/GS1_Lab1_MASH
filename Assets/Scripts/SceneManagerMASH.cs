@@ -9,6 +9,7 @@ public class SceneManagerMASH : MonoBehaviour
 
     public GameObject GameOverPrefab;
     public GameObject YouWinPrefab;
+    // public GameObject ResetButtonPrefab;
 
     private Vector3 PlayerSpawn = new Vector3(-7.5f, 0.0f, 0.0f);
     private Vector3 TreeSpawn1 = new Vector3(1.0f, 1.9f, 0.0f);
@@ -23,6 +24,8 @@ public class SceneManagerMASH : MonoBehaviour
 
     private Vector3 GameOverSpawn = new Vector3(0.0f, 0.0f, -1.0f);
     private Vector3 YouWinSpawn = new Vector3(0.0f, 0.0f, -1.0f);
+    // private Vector3 ResetButtonSpawn = new Vector3(0.0f, 0.0f, -1.0f);
+
 
     public int SoldiersInField = 5;
     public int SoldiersInHelicopter = 0;
@@ -53,6 +56,7 @@ public class SceneManagerMASH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (KeyCode.R)
         if (isGameRunning)
         {
             if (SoldiersInField <= 0)
