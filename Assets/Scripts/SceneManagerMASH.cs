@@ -38,7 +38,7 @@ public class SceneManagerMASH : MonoBehaviour
     public bool isGameRunning = true;
 
     public Text scoreKeepingText;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -64,7 +64,11 @@ public class SceneManagerMASH : MonoBehaviour
             .FindGameObjectWithTag("Score")
             .GetComponentInChildren<Canvas>()
             .GetComponent<Text>();
-        print(scoreKeepingText.text);
+        // print(scoreKeepingText.text);
+        scoreKeepingText.text = "Soldiers in Helicopter: "
+                                + SoldiersInHelicopter
+                                + "\nSoldiers Rescued: "
+                                + SoldiersInHospital;
     }
 
     // Update is called once per frame
