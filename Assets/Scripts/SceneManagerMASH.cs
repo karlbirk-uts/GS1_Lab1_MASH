@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneManagerMASH : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class SceneManagerMASH : MonoBehaviour
 
     public bool isGameRunning = true;
 
+    public Text scoreKeepingText;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +59,12 @@ public class SceneManagerMASH : MonoBehaviour
         Instantiate(YouWinPrefab, YouWinSpawn, Quaternion.identity);
 
         inputActionReloadMap = InputSystem.actions.FindAction("ReloadMap");
+
+        scoreKeepingText = GameObject
+            .FindGameObjectWithTag("Score")
+            .GetComponentInChildren<Canvas>()
+            .GetComponent<Text>();
+        print(scoreKeepingText.text);
     }
 
     // Update is called once per frame
