@@ -45,6 +45,8 @@ public class SoldierRescueSystem : MonoBehaviour
             sceneManagerMASH.SoldiersInHospital += sceneManagerMASH.SoldiersInHelicopter;
             sceneManagerMASH.SoldiersInHelicopter = 0;
             print("Hit Trigger: Hospital");
+            sceneManagerMASH.updateScoreText();
+
         }
         else if (collider2DObject.gameObject.tag == "Tree")
         {
